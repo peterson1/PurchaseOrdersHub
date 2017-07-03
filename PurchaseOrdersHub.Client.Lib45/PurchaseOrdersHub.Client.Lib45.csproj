@@ -114,6 +114,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VendorSKUSearchUI\DesignTimeDataVM.cs" />
+    <Compile Include="VendorSKUSearchUI\SearchFilterPane.xaml.cs">
+      <DependentUpon>SearchFilterPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VendorSKUSearchUI\VendorSKUSearchFilterVM.cs" />
+    <Compile Include="VendorSKUSearchUI\VendorSKUSearchRow.cs" />
+    <Compile Include="VendorSKUSearchUI\VendorSKUSearchTabUI.xaml.cs">
+      <DependentUpon>VendorSKUSearchTabUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VendorSKUSearchUI\VendorSKUSearchTabVM.cs" />
+    <Compile Include="VendorSKUSearchUI\VendorSKUsTable.xaml.cs">
+      <DependentUpon>VendorSKUsTable.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindows\MainClientWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -124,6 +137,18 @@
     <Compile Include="MainWindows\MainClientWindow1.xaml.cs">
       <DependentUpon>MainClientWindow1.xaml</DependentUpon>
     </Compile>
+    <Page Include="VendorSKUSearchUI\SearchFilterPane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VendorSKUSearchUI\VendorSKUSearchTabUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VendorSKUSearchUI\VendorSKUsTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindows\MainClientWindowVM.cs" />

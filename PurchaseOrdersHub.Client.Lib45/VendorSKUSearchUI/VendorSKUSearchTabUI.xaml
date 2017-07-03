@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="PurchaseOrdersHub.Client.Lib45.VendorSKUSearchUI.VendorSKUSearchTabUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xtk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:PurchaseOrdersHub.Client.Lib45.VendorSKUSearchUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="700"
+             d:DataContext="{d:DesignInstance local:DesignTimeDataVM, IsDesignTimeCreatable=True}"
+             Background="White"
+             >
+    <Grid Margin="10">
+        <DockPanel>
+            <local:SearchFilterPane DockPanel.Dock="Top" 
+                                    DataContext="{Binding Filters}"
+                                    />
+
+            <local:VendorSKUsTable DataContext="{Binding Rows}" />
+
+        </DockPanel>
+        
+        <xtk:BusyIndicator IsBusy="{Binding IsBusy}"
+                           BusyContent="{Binding BusyText}"
+                           />
+    </Grid>
+</UserControl>

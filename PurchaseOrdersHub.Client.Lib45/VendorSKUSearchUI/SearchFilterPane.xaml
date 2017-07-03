@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="PurchaseOrdersHub.Client.Lib45.VendorSKUSearchUI.SearchFilterPane"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xtk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:PurchaseOrdersHub.Client.Lib45.VendorSKUSearchUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+
+        <DataTemplate x:Key="tplWatermark">
+            <TextBlock Text="{Binding}" Foreground="Gray" 
+                       FontStyle="Italic" 
+                       Padding="3,0,0,0"
+                       TextWrapping="Wrap" />
+        </DataTemplate>
+
+        <Style x:Key="filtr" TargetType="xtk:WatermarkTextBox">
+            <Setter Property="Margin" Value="2,0,0,0" />
+            <Setter Property="WatermarkTemplate" Value="{StaticResource tplWatermark}" />
+            <Setter Property="Padding" Value="3,0,3,0" />
+            <Setter Property="Height" Value="20" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="AutoMoveFocus" Value="True" />
+            <Setter Property="AutoSelectBehavior" Value="OnFocus" />
+        </Style>
+
+        <Style x:Key="txtLabel" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="TextAlignment" Value="Right" />
+            <Setter Property="Padding" Value="0,0,4,0" />
+        </Style>
+        
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal"
+                >
+        <TextBlock Text="filter by :"
+                   Width="63"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource txtLabel}"
+                   />
+
+        <xtk:WatermarkTextBox Watermark="barcode"
+                              Text="{Binding BarcodeFilter, UpdateSourceTrigger=PropertyChanged}"
+                              Style="{StaticResource filtr}"
+                              Width="119"
+                              />
+        <xtk:WatermarkTextBox Watermark="supplier"
+                              Text="{Binding VendorFilter, UpdateSourceTrigger=PropertyChanged}"
+                              Style="{StaticResource filtr}"
+                              MinWidth="200"
+                              />
+        <xtk:WatermarkTextBox Watermark="product"
+                              Text="{Binding ProductFilter, UpdateSourceTrigger=PropertyChanged}"
+                              Style="{StaticResource filtr}"
+                              MinWidth="200"
+                              />
+        <xtk:WatermarkTextBox Watermark="UoM"
+                              Text="{Binding UoMFilter, UpdateSourceTrigger=PropertyChanged}"
+                              Style="{StaticResource filtr}"
+                              Width="68"
+                              />
+    </StackPanel>
+</UserControl>

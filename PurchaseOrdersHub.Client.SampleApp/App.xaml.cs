@@ -15,7 +15,6 @@ namespace PurchaseOrdersHub.Client.SampleApp
                 win.Close();
             else
                 win.Show();
-
         }
     }
 }
