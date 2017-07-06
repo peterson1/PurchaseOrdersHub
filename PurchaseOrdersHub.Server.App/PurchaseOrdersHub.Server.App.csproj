@@ -77,6 +77,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistence\RecordFormats\POHeaderDBRow.cs" />
+    <Compile Include="Persistence\RecordFormats\POLineItemDBRow.cs" />
+    <Compile Include="Persistence\RecordFormats\VendorDBRow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
