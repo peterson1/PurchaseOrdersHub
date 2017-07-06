@@ -16,7 +16,9 @@
                                     DataContext="{Binding Filters}"
                                     />
 
-            <local:VendorSKUsTable DataContext="{Binding Rows}" />
+            <local:VendorSKUsTable DataContext="{Binding Rows}" 
+                                   Margin="0,10,0,0"
+                                   />
 
         </DockPanel>
         
