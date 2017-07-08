@@ -14,7 +14,7 @@ using System.Windows;
 
 namespace PurchaseOrdersHub.Client.Lib45.ComponentRegistry
 {
-    public abstract class ClientComponentRegistryBase : ComponentRegistryBase<ClientSettingsN45>
+    public abstract class ClientComponentRegistryBase : ComponentRegistryBase<PurchaseOrderClientCfg45>
     {
         protected override void RegisterComponents(ContainerBuilder b)
         {
@@ -36,10 +36,10 @@ namespace PurchaseOrdersHub.Client.Lib45.ComponentRegistry
         }
 
 
-        protected override ClientSettingsN45 LoadSettingsFile(IFileSystemAccesor fs)
+        protected override PurchaseOrderClientCfg45 LoadSettingsFile(IFileSystemAccesor fs)
         {
-            var loadr = new BesideExeCfgLoader<ClientSettingsN45>(fs);
-            return loadr.Load(ClientSettingsN45.CreateDraft());
+            var loadr = new BesideExeCfgLoader<PurchaseOrderClientCfg45>(fs);
+            return loadr.Load(PurchaseOrderClientCfg45.CreateDraft());
         }
 
 

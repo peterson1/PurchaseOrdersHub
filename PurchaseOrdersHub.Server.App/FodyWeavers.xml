@@ -3,4 +3,5 @@
   <PropertyChanged />
   <ConfigureAwait />
   <MethodTimer />
+  <Costura CreateTemporaryAssemblies='true' />
 </Weavers>

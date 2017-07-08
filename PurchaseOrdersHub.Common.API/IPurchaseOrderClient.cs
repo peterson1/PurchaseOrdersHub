@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Threading.Tasks;
 
 namespace PurchaseOrdersHub.Common.API
 {
     public interface IPurchaseOrderClient
     {
-
+        //Task<List<POHeaderDTO>>  GetAllHeaders  ();
+        Task<uint>  CountAll ();
     }
 }
