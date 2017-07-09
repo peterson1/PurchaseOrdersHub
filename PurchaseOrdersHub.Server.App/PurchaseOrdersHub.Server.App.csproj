@@ -144,8 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Persistence\MonoTypeLiteDB1.cs" />
+    <Compile Include="Persistence\ProductHeaderLiteDB1.cs" />
+    <Compile Include="Persistence\PurchaseOrderLiteDB1.cs" />
     <Compile Include="ServerRegistry.cs" />
+    <Compile Include="SignalRHubs\ProductHeaderHub.cs" />
     <Compile Include="SignalRHubs\PurchaseOrderHub.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

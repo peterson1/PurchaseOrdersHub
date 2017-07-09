@@ -16,8 +16,10 @@ namespace PurchaseOrdersHub.Server.App
         protected override void RegisterServerComponents(ContainerBuilder b, Application app)
         {
             b.Hub<PurchaseOrderHub>();
+            b.Hub<ProductHeaderHub>();
 
-            b.Solo<MonoTypeLocalDB<PurchaseOrderDTO>, MonoTypeLiteDB1>();
+            b.Solo<MonoTypeLocalDB<ProductHeaderDTO>, ProductHeaderLiteDB1>();
+            b.Solo<MonoTypeLocalDB<PurchaseOrderDTO>, PurchaseOrderLiteDB1>();
 
             b.Solo<IWebAppStarter, ServerRegistry>();
         }

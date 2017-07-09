@@ -6,9 +6,9 @@ using Repo2.Core.ns11.FileSystems;
 
 namespace PurchaseOrdersHub.Server.App.Persistence
 {
-    internal class MonoTypeLiteDB1 : MonoTypeLocalDB<PurchaseOrderDTO>
+    internal class ProductHeaderLiteDB1 : MonoTypeLocalDB<ProductHeaderDTO>
     {
-        public MonoTypeLiteDB1(IFileSystemAccesor fileSystemAccessor, ActivityLogVM activityLogVM, ServerSettings serverSettings) : base(fileSystemAccessor, activityLogVM, serverSettings)
+        public ProductHeaderLiteDB1(IFileSystemAccesor fileSystemAccessor, ActivityLogVM activityLogVM, ServerSettings serverSettings) : base(fileSystemAccessor, activityLogVM, serverSettings)
         {
         }
     }
