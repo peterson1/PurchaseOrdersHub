@@ -6,5 +6,6 @@ namespace PurchaseOrdersHub.Common.API.DTOs
 {
     public class PurchaseOrderDTO
     {
+        public uint Id { get; set; }
     }
 }

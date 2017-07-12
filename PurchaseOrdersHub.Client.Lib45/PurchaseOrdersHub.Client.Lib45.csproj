@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HubClients\POHubClientBase.cs" />
+    <Compile Include="HubClients\ProductBundleClient1.cs" />
     <Compile Include="HubClients\ProductHeaderClient1.cs" />
     <Compile Include="HubClients\PurchaseOrderHubClient1.cs" />
     <Compile Include="VendorSKUSearchUI\DesignTimeDataVM.cs" />

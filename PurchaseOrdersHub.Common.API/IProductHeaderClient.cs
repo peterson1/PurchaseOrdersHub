@@ -9,5 +9,6 @@ namespace PurchaseOrdersHub.Common.API
     {
         Task<uint>  CountAllHeaders  ();
         Task        ReplaceAll       (IEnumerable<ProductHeaderDTO> replacements);
+        Task<Dictionary<int, uint>> GetLegacyIdToHubIdDictionary();
     }
 }
